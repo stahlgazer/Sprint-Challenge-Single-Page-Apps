@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import {Link} from 'react-router-dom';
 
-export default function SearchForm() {
+
+export default function SearchForm(props) {
+  console.log(props, 'this is my search props')
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const handleChange = event => {
@@ -10,12 +11,12 @@ export default function SearchForm() {
   }
   
   useEffect(() => {
-    const results = searchResults.filter(person =>
-      person.toLowerCase().includes(searchTerm)
+    const results = props.characters.filter(person =>
+      person.toString().toLowerCase().includes(searchTerm)
     );
     console.log(results)
     setSearchResults(results);
-  }, [searchTerm]);
+  },[searchTerm]);
   return (
     <section className="search-form">
            <input

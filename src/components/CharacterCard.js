@@ -1,11 +1,19 @@
 import React from "react";
+import {
+  Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button
+} from 'reactstrap';
 
 export default function CharacterCard(props) {
   return (
     <div>
-    <h2>Name: {props.name}</h2>
-    <p>Status: {props.status}</p>
-    <p>Species: {props.species}</p>
+      <Card body outline color="success">
+      <CardBody>
+      <CardTitle style={{color : 'Red'}}>Name: {props.name}</CardTitle>
+      <CardText>Status: {props.status}</CardText>
+      <CardText>Species: {props.species}</CardText>
+    </CardBody>
+    </Card>
     </div>
   )
 }
