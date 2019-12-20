@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import CharacterCard from './CharacterCard';
 
 export default function SearchForm(props) {
   //console.log(props, 'this is my search props')
@@ -30,8 +30,22 @@ export default function SearchForm(props) {
         onChange={handleChange}
       />
       <ul>
-         {searchResults.map(item => (
-          <li key={item.id}>{item.name}</li>
+         {searchResults.length > 0 ? searchResults.map(item => (
+          <CharacterCard
+          characters={props.characters}
+          key={item.id}
+          name={item.name}
+          status={item.status}
+          species={item.species}
+          />
+        )) : props.characters.map(item => (
+          <CharacterCard
+          characters={props.characters}
+          key={item.id}
+          name={item.name}
+          status={item.status}
+          species={item.species}
+          />
         ))}
       </ul>
     </section>

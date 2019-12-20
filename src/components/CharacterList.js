@@ -24,7 +24,7 @@ export default function CharacterList() {
   return (
     <section className="character-list">
       <SearchForm characters={characters}/>
-      {characters.map(item => {
+      {/* {characters.map(item => {
         return (
           <CharacterCard
           characters={characters}
@@ -34,7 +34,7 @@ export default function CharacterList() {
           species={item.species}
           />
         )
-      })}
+      })} */}
     </section>
   );
 }
