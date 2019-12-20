@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: Client side routing can increase an initial load time while downloading the app from the server, but afterwards make it so the website isn't constantly refreshing from the server everytime an element needs to be rendered/re-rendered. This gives the user a much better experience once the initial application is loaded, as well when navigating from page to page while decreasing issues with connectivity.
 
 ## Project Set Up
 
